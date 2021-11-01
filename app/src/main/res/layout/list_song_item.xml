@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/song_item_bg"
+        android:clickable="true"
+        android:focusable="true">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSongNumber"
+            style="@style/TextViewSemiBoldGrey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/cardView"
+            app:layout_constraintEnd_toStartOf="@id/cardView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cardView"
+            tools:text="01" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="@color/mirage"
+            app:cardCornerRadius="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvSongNumber"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_unlock"
+                    app:tint="@color/white" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSongName"
+            style="@style/TextViewSemiBoldWhite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="Name of Song"
+            app:layout_constraintBottom_toBottomOf="@id/cardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cardView"
+            app:layout_constraintTop_toTopOf="@id/cardView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

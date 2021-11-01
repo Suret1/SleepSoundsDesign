@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Sleep Sounds</string>
+    <string name="sleep">Sleep</string>
+    <string name="composer">Composer</string>
+    <string name="profile">Profile</string>
+    <string name="all">All</string>
+    <string name="instrumental">Instrumental</string>
+    <string name="ambient">Ambient</string>
+    <string name="unlock">Unlock</string>
+    <string name="unfavorite">Unfavorite</string>
+    <string name="about_pack">About this pack</string>
+    <string name="lorem_ipsum">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer</string>
+    <string name="featured_on">Featured On</string>
+    <string name="pack_name">Pack name</string>
+</resources>
+

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:overScrollMode="never"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/mirage"
+            tools:context=".ui.profile.ProfileFragment">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHours"
+                style="@style/TextViewSemiBoldGrey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="4 Hours"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDot"
+                style="@style/TextViewSemiBoldGrey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="•"
+                app:layout_constraintBottom_toBottomOf="@id/tvHours"
+                app:layout_constraintStart_toEndOf="@id/tvHours" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCategoryName"
+                style="@style/TextViewSemiBoldGrey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="Ambient"
+                app:layout_constraintBottom_toBottomOf="@id/tvHours"
+                app:layout_constraintStart_toEndOf="@id/tvDot" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="25dp"
+                android:background="@color/manatee"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCategoryName" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUnlock"
+                style="@style/ButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/unlock"
+                app:backgroundTint="@color/orange_a200"
+                app:icon="@drawable/ic_unlock"
+                app:layout_constraintEnd_toStartOf="@id/btnUnfavorite"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line"
+                app:rippleColor="@color/blue_grey_900" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUnfavorite"
+                style="@style/ButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/unfavorite"
+                android:textColor="@color/orange_a200"
+                app:backgroundTint="@color/ebony_clay"
+                app:icon="@drawable/ic_star"
+                app:iconTint="@null"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnUnlock"
+                app:layout_constraintTop_toBottomOf="@id/line"
+                app:rippleColor="@color/blue_grey_900" />
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/manatee"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnUnlock" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAboutPack"
+                style="@style/TextViewSemiBoldWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@string/about_pack"
+                app:layout_constraintBottom_toTopOf="@id/tvDesc"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line2" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDesc"
+                style="@style/TextViewSemiBoldGrey"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@string/lorem_ipsum"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAboutPack" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@color/ebony_clay"
+                app:cardCornerRadius="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDesc">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvListOfSongs"
+                        style="@style/TextViewSemiBoldGrey"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:text="List of songs"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvListSongs"
+                        android:layout_width="match_parent"
+                        android:overScrollMode="never"
+                        android:layout_height="match_parent"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvListOfSongs"
+                        tools:listitem="@layout/list_song_item" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvFeaturedOn"
+                style="@style/TextViewSemiBoldWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/featured_on"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardView" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSound"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="16dp"
+                android:overScrollMode="never"
+                android:layout_marginTop="5dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvFeaturedOn"
+                app:spanCount="2"
+                tools:listitem="@layout/list_pack_item" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

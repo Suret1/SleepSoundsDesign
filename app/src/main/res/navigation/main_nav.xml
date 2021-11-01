@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav.xml"
+    app:startDestination="@id/sleep">
+
+    <fragment
+        android:id="@+id/sleep"
+        android:name="com.suret.sleepsounds.ui.sleep.SleepFragment"
+        android:label="@string/sleep"
+        tools:layout="@layout/fragment_sleep" />
+    <fragment
+        android:id="@+id/composer"
+        android:name="com.suret.sleepsounds.ui.composer.ComposerFragment"
+        android:label="@string/composer"
+        tools:layout="@layout/fragment_composer" />
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.suret.sleepsounds.ui.profile.ProfileFragment"
+        android:label="@string/pack_name"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
