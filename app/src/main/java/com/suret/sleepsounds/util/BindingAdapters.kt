@@ -1,4 +1,4 @@
-package com.suret.sleepsounds.ui.composer.adapter.util
+package com.suret.sleepsounds.util
 
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.databinding.BindingAdapter

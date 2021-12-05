@@ -9,8 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.suret.sleepsounds.data.model.ComposerCategory
 import com.suret.sleepsounds.databinding.MainRvRowItemBinding
 import com.suret.sleepsounds.ui.composer.adapter.MainRecyclerAdapter.MainRecyclerViewHolder
-import com.suret.sleepsounds.ui.composer.adapter.util.EqualSpacingItemDecoration
-import com.suret.sleepsounds.ui.composer.adapter.util.Util.dpToPx
+import com.suret.sleepsounds.util.EqualSpacingItemDecoration
+import com.suret.sleepsounds.util.Util.dpToPx
 
 class MainRecyclerAdapter : ListAdapter<ComposerCategory, MainRecyclerViewHolder>(diffCallBack) {
 

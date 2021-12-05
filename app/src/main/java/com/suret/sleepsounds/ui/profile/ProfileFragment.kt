@@ -10,9 +10,9 @@ import com.suret.sleepsounds.R
 import com.suret.sleepsounds.data.listmaker.ListMaker.getSongList
 import com.suret.sleepsounds.data.listmaker.ListMaker.getSoundList
 import com.suret.sleepsounds.databinding.FragmentProfileBinding
+import com.suret.sleepsounds.util.DividerItemDecorator
 import com.suret.sleepsounds.ui.profile.adapter.SongAdapter
 import com.suret.sleepsounds.ui.profile.adapter.SoundAdapter
-import com.suret.sleepsounds.ui.composer.adapter.util.DividerItemDecorator
 
 class ProfileFragment : Fragment() {
     private val binding by lazy { FragmentProfileBinding.inflate(layoutInflater) }
@@ -25,14 +25,22 @@ class ProfileFragment : Fragment() {
     ): View {
         initAdapters()
         adapter.submitList(getSongList())
-        binding.rvListSongs.addItemDecoration(DividerItemDecorator(ContextCompat.getDrawable(requireContext(), R.drawable.recycler_view_divider)))
+        binding.rvSong.addItemDecoration(
+            DividerItemDecorator(
+                ContextCompat.getDrawable(
+                    requireContext(),
+                    R.drawable.recycler_view_divider
+                )
+            )
+        )
         soundAdapter.submitList(getSoundList())
+
         return binding.root
     }
 
     private fun initAdapters() {
         with(binding) {
-            rvListSongs.adapter = adapter
+            rvSong.adapter = adapter
             rvSound.adapter = soundAdapter
         }
     }

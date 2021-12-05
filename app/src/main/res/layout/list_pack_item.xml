@@ -18,7 +18,6 @@
         android:background="@drawable/pack_item_bg"
         android:clickable="true"
         android:focusable="true"
-        android:overScrollMode="never"
         android:paddingBottom="16dp">
 
         <com.google.android.material.card.MaterialCardView

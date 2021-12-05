@@ -9,8 +9,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.suret.sleepsounds.data.model.SoundModel
 import com.suret.sleepsounds.databinding.FragmentSleepItemListBinding
 import com.suret.sleepsounds.ui.profile.adapter.SoundAdapter
-import com.suret.sleepsounds.ui.composer.adapter.util.EqualSpacingItemDecoration
-import com.suret.sleepsounds.ui.composer.adapter.util.Util.dpToPx
+import com.suret.sleepsounds.util.EqualSpacingItemDecoration
+import com.suret.sleepsounds.util.Util.dpToPx
 
 class SleepItemListFragment : Fragment() {
     private val binding by lazy { FragmentSleepItemListBinding.inflate(layoutInflater) }

@@ -20,6 +20,7 @@ class SoundAdapter : ListAdapter<SoundModel, SoundViewHolder>(DiffCB) {
         )
     }
 
+
     override fun onBindViewHolder(holder: SoundViewHolder, position: Int) {
         holder.bind(getItem(position))
     }

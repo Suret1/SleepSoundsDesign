@@ -1,4 +1,4 @@
-package com.suret.sleepsounds.ui.composer.adapter.util
+package com.suret.sleepsounds.util
 
 import android.graphics.Rect
 import android.view.View
